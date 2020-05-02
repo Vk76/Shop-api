@@ -1,0 +1,19 @@
+{
+  "name": "shop-api",
+  "version": "1.0.0",
+  "description": "A basic food ordering rest api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "restful",
+    "api"
+  ],
+  "author": "Vishal Kriplani",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
