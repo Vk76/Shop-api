@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
+// Handling incoming GET requests to /orders
 router.get("/", (req, res, next) => {
   res.status(200).json({
     message: "This is GET of orders",
