@@ -1,0 +1,5 @@
+{ 
+    "env":{
+        "Mongo_Atlas_Password":"merapassword"
+    }
+}

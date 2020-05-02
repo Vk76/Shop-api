@@ -2,10 +2,18 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
 
 // Routes which handle requests
 const productRoutes = require("./api/routes/products");
 const orderRoutes = require("./api/routes/orders");
+
+// Mongo Connection
+mongoose.connect(
+  "mongodb+srv://vishal:" +
+    process.env.Mongo_Atlas_Password +
+    "@cluster0-mcwgc.gcp.mongodb.net/test?retryWrites=true&w=majority"
+);
 
 // Handling CORS
 app.use((req, res, next) => {
