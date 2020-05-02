@@ -12,8 +12,10 @@ const orderRoutes = require("./api/routes/orders");
 mongoose.connect(
   "mongodb+srv://vishal:" +
     process.env.Mongo_Atlas_Password +
-    "@cluster0-mcwgc.gcp.mongodb.net/test?retryWrites=true&w=majority"
+    "@cluster0-mcwgc.gcp.mongodb.net/test?retryWrites=true&w=majority",
+  { useNewUrlParser: true, useUnifiedTopology: true }
 );
+mongoose.Promise = global.Promise;
 
 // Handling CORS
 app.use((req, res, next) => {
