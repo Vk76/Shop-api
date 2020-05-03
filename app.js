@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 // Routes which handle requests
 const productRoutes = require("./api/routes/products");
 const orderRoutes = require("./api/routes/orders");
+const userRoutes = require("./api/routes/users");
 
 // Mongo Connection
 mongoose.connect(
@@ -15,6 +16,7 @@ mongoose.connect(
     "@cluster0-mcwgc.gcp.mongodb.net/test?retryWrites=true&w=majority",
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
+
 mongoose.Promise = global.Promise;
 
 // Handling CORS
@@ -38,6 +40,7 @@ app.use(bodyParser.json());
 
 app.use("/products", productRoutes);
 app.use("/orders", orderRoutes);
+app.use("/users", userRoutes);
 
 // Error handling
 app.use((req, res, next) => {
