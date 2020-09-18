@@ -1,4 +1,4 @@
-{ 
+{            
     "env":{
         "Mongo_Atlas_Password":"merapassword",
         "JWT_KEY":"merasecter"
