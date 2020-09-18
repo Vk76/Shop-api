@@ -3,6 +3,7 @@ This is a basic api which handles user authentication and orders and product rel
 
 # Design of API
 ![](Design.JPG)
+* In the above design routes of __Login__ and __Signup__ are also added.
 
 # Command Line Utility (python demo.py)
 ![](command.JPG)
